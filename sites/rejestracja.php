@@ -68,7 +68,7 @@
                 <b>Twoja nazwa użytkownika...</b>
                 <p class="data-invalid" id="c_1">...musi mieć co najmniej 6 znaków</p>
                 <p class="data-invalid" id="c_2">...musi być unikalna</p>
-                <p class="data-invalid" id="c_10">...nie może zawierać znaków specjalnych i diaktrycznych</p>
+                <p class="data-invalid" id="c_10">...nie może zawierać znaków specjalnych innych niż _ lub -</p>
                 <b>Twoje hasło...</b>
                 <p class="data-invalid" id="c_3">...musi mieć co najmniej 8 znaków</p>
                 <p class="data-invalid" id="c_4">...musi mieć co najmniej 1 znak specjalny</p>
@@ -76,6 +76,7 @@
                 <p class="data-invalid" id="c_6">...musi mieć co najmniej 1 cyfrę</p>
                 <p class="data-invalid" id="c_7">...musi się zgadzać z tym podanym w drugiej rubryce</p>
                 <b>Twój adres mailowy...</b>
+                <p class="data-invalid" id="c_11">...ma poprawny format</p>
                 <p class="data-invalid" id="c_8">...musi być unikalny</p>
                 <b>Twoje imię, nazwisko i szkoła z klasą lub organizacja do której przynależysz...</b>
                 <p class="data-invalid" id="c_9">...muszą zostać przez Ciebie podane</p>
@@ -83,12 +84,17 @@
                     let e = 0;
                     function check_data()
                     {
-                        if(e>10)
+                        if(e>11)
                         {
                             document.getElementById('r_i_registration_button').style.display = 'block';
                         } else {
                             document.getElementById('r_i_registration_button').style.display = 'none';
                         }
+                    }
+
+                    function isValidEmail(email) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        return emailRegex.test(email);
                     }
 
                     function validate_data()
@@ -205,7 +211,7 @@
                             document.getElementById('c_9').classList.remove("data-valid");
                         }
 
-                        var specialchars = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~ążźćśółńę]/;
+                        var specialchars = /[ `!@#$%^&*()+=\[\]{};':"\\|,.<>\/?~]/;
                         if(specialchars.test(document.querySelector('input[name="username"]').value))
                         {
                             document.getElementById('c_10').classList.add("data-invalid");
@@ -214,6 +220,16 @@
                             e++;
                             document.getElementById('c_10').classList.add("data-valid");
                             document.getElementById('c_10').classList.remove("data-invalid");
+                        }
+
+                        if(isValidEmail(document.querySelector('input[name="mail"]').value))
+                        {
+                            document.getElementById('c_11').classList.add("data-invalid");
+                            document.getElementById('c_11').classList.remove("data-valid");
+                        } else {
+                            e++;
+                            document.getElementById('c_11').classList.add("data-valid");
+                            document.getElementById('c_11').classList.remove("data-invalid");
                         }
 
                         if(document.querySelector('input[name="agree_1"]').checked && document.querySelector('input[name="agree_2"]').checked)
