@@ -226,8 +226,8 @@
                         {
                             document.getElementById('c_11').classList.add("data-valid");
                             document.getElementById('c_11').classList.remove("data-invalid");
-                        } else {
                             e++;
+                        } else {
                             document.getElementById('c_11').classList.add("data-invalid");
                             document.getElementById('c_11').classList.remove("data-valid");
                         }
