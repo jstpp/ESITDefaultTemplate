@@ -84,7 +84,7 @@
                     let e = 0;
                     function check_data()
                     {
-                        if(e>11)
+                        if(e>=11)
                         {
                             document.getElementById('r_i_registration_button').style.display = 'block';
                         } else {
