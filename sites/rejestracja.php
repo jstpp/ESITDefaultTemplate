@@ -224,12 +224,12 @@
 
                         if(isValidEmail(document.querySelector('input[name="mail"]').value))
                         {
-                            document.getElementById('c_11').classList.add("data-invalid");
-                            document.getElementById('c_11').classList.remove("data-valid");
-                        } else {
-                            e++;
                             document.getElementById('c_11').classList.add("data-valid");
                             document.getElementById('c_11').classList.remove("data-invalid");
+                        } else {
+                            e++;
+                            document.getElementById('c_11').classList.add("data-invalid");
+                            document.getElementById('c_11').classList.remove("data-valid");
                         }
 
                         if(document.querySelector('input[name="agree_1"]').checked && document.querySelector('input[name="agree_2"]').checked)
