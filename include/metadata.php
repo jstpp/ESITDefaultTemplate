@@ -1,5 +1,5 @@
 <?php
-    require_once(__DIR__.'/../app/core.php');
+    require_once(__DIR__.'/../../include/app/core.php');
     if(!boolval(get_misc_value('plugin_portal')))
     {
         redirect("app/index.php");
