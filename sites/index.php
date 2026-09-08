@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <?php include(__DIR__."/../include/portal/metadata.php"); ?>
+    <?php include(__DIR__."/include/metadata.php"); ?>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="include/css/default.css" rel="stylesheet">
@@ -13,7 +13,7 @@
     <link href="include/css/sites/style_index.css" rel="stylesheet">
 </head>
 <body>
-    <?php include(__DIR__."/../include/portal/main_menu.php"); ?>
+    <?php include(__DIR__."/include/main_menu.php"); ?>
     <div id="welcome_sector">
         <h1 style="width: 80%; margin-left: 10%;"><?php if(isset($general_title)) { echo($general_title); } else { echo("This is my first ESIT website!"); } ?></h1>
         <h2 id="welcome_motd"></h2>
@@ -143,7 +143,7 @@
         <br />
     </div>
     <br style="clear: both;" />
-    <?php include(__DIR__.'/../include/portal/main_footer.php'); ?>
+    <?php include(__DIR__.'/include/main_footer.php'); ?>
     <script>
         var i = 0;
         var txt = '<?php if(isset($general_motd) and strlen($general_motd)>1) { echo($general_motd); } else { echo("You can change MOTD and title in the settings section."); } ?>';

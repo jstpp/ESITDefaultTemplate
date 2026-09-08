@@ -11,11 +11,11 @@
     <link href="include/css/main_footer.css" rel="stylesheet">
     <link href="include/css/sites/default.css" rel="stylesheet">
     <link href="include/css/sites/style_rejestracja.css" rel="stylesheet">
-    <?php if(boolval(get_misc_value('plugin_portal'))) include(__DIR__."/../include/portal/metadata.php"); ?>
+    <?php if(boolval(get_misc_value('plugin_portal'))) include(__DIR__."/include/metadata.php"); ?>
 
 </head>
 <body>
-    <?php if(boolval(get_misc_value('plugin_portal'))) include(__DIR__."/../include/portal/main_menu.php"); ?>
+    <?php if(boolval(get_misc_value('plugin_portal'))) include(__DIR__."/include/main_menu.php"); ?>
     <div id="welcome_sector">
         <img src="img/background.gif" draggable="false"/>
         <h1>Zarejestruj się</h1>
@@ -244,6 +244,6 @@
     </div>
     <br style="clear: both;" />
     <br />
-    <?php if(boolval(get_misc_value('plugin_portal'))) include(__DIR__.'/../include/portal/main_footer.php'); ?>
+    <?php if(boolval(get_misc_value('plugin_portal'))) include(__DIR__.'/include/main_footer.php'); ?>
 </body>
 </html>

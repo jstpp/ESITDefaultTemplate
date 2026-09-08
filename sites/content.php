@@ -31,10 +31,10 @@
     <link href="include/css/main_footer.css" rel="stylesheet">
     <link href="include/css/sites/default.css" rel="stylesheet">
     <link href="include/css/sites/style_aktualnosci.css" rel="stylesheet">
-    <?php include(__DIR__."/../include/portal/metadata.php"); ?>
+    <?php include(__DIR__."/include/metadata.php"); ?>
 </head>
 <body>
-    <?php include(__DIR__."/../include/portal/main_menu.php"); ?>
+    <?php include(__DIR__."/include/main_menu.php"); ?>
     <div id="welcome_sector">
         <img src="<?php echo(htmlentities($article_image_path)); ?>" draggable="false"/>
         <h1><?php echo(htmlentities($article_title)); ?></h1>
@@ -48,6 +48,6 @@
     </div>
     <br style="clear: both;" />
     <br />
-    <?php include(__DIR__.'/../include/portal/main_footer.php'); ?>
+    <?php include(__DIR__.'/include/main_footer.php'); ?>
 </body>
 </html>
