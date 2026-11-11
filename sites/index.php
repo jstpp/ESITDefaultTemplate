@@ -132,7 +132,7 @@
     </div>
     <div>
     <?php
-        include('include/elements/main_page_content.php');
+        include('include/elements/main_page_content.html');
     ?>
     <div id="beginner_sector">
         <h1 style="margin-top: 2vmax; margin-bottom: 2vmax; background-image: url('img/background.gif'); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 6vmax;">Wielkie rzeczy zaczynają się od małych kroków!</h1>

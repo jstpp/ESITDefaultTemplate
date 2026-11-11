@@ -21,7 +21,7 @@
     </div>
     <br style="clear: both;" />
     <div id="content">
-        <?php include('include/elements/faq_content.php');?>
+        <?php include('include/elements/faq_content.html');?>
     </div>
     <br style="clear: both;" />
     <br />
